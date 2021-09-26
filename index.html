@@ -1,0 +1,1074 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>LennoxPROs.com</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <link href="https://images.lennoxpros.com/is/content/LennoxIntl/Other%20%28Logos%2C%20Banners%20etc%29/Landing%20Page%20Images/rss/lennoxpros%2Dupdates.rss" rel="alternate" type="application/rss+xml" title="Whats New on LennoxPROs.com" />
+
+            <script src="script/satellitelib-86bda49e76015bd9ad45b96c2b9cec90c35ee1b3_c83o7cu3tv30qjxbmpu4p2.js"></script>
+    <meta name="msvalidate.01" content="985F2D18BA5F530F53AFE5B5B2C49CF8" /><link rel="canonical" href="index.html" />
+        <link rel="alternate" media="only screen and (max-width: 640px)" href="https://m.lennoxpros.com/superheat-subcooling-calculator" />
+    <link rel="shortcut icon" type="image/x-icon" media="all" href="_ui/desktop/theme-lennoxpro/favicon.ico"/>
+    <link rel="publisher" href="https://plus.google.com/102249968259092373511"/>
+    <!--Fonts -->
+<link rel="stylesheet"  href="_ui/shared/css/fontawesome-all.min.css"/>
+<link rel="stylesheet"  href="//fonts.googleapis.com/css?family=Titillium+Web:400,400italic,600,700"/>
+	<link href="//fonts.googleapis.com/css?family=Maven+Pro:400,500,700,900" rel="stylesheet">
+	<link href="//fonts.googleapis.com/css?family=Open+Sans:400,400i,600,600i,700,700i&display=swap" rel="stylesheet">
+<link rel="stylesheet" type="text/css" media="all" href="_ui/desktop/theme-lennoxpro/css/homepage-combined.css" />
+<link rel="stylesheet" type="text/css" media="all" href="_ui/desktop/theme-lennoxpro/css/search-optimization.css"/>
+<link rel="stylesheet" media="all" href="_ui/desktop/theme-lennoxpro/css/homepage-v2.css" />
+<link rel="stylesheet" type="text/css" media="all" href="_ui/desktop/theme-lennoxpro/css/vendor/cirrus.min.css"/>
+<input type="hidden" value="/_ui/shared/fonts/" id="fontPath">
+<input type="hidden" value="true" id="useGoogleFonts">
+<script type="text/javascript">
+var doc = window.document;
+// loadCSS: load a CSS file asynchronously. Included from https://github.com/filamentgroup/loadCSS/
+function loadCSS( href, before, media ){
+	// Arguments explained:
+	// `href` is the URL for your CSS file.
+	// `before` optionally defines the element we'll use as a reference for injecting our <link>
+	// By default, `before` uses the first <script> element in the page.
+	// However, since the order in which stylesheets are referenced matters, you might need a more specific location in your document.
+	// If so, pass a different reference element to the `before` argument and it'll insert before that instead
+	// note: `insertBefore` is used instead of `appendChild`, for safety re: http://www.paulirish.com/2011/surefire-dom-element-insertion/
+	var ss = window.document.createElement( "link" );
+	var ref = before || window.document.getElementsByTagName( "script" )[ 0 ];
+	var sheets = window.document.styleSheets;
+	ss.rel = "stylesheet";
+	ss.href = href;
+	// temporarily, set media to something non-matching to ensure it'll fetch without blocking render
+	ss.media = "only x";
+	// inject link
+	ref.parentNode.insertBefore( ss, ref );
+	// This function sets the link's media back to `all` so that the stylesheet applies once it loads
+	// It is designed to poll until document.styleSheets includes the new sheet.
+	function toggleMedia(){
+		var defined;
+		for( var i = 0; i < sheets.length; i++ ){
+			if( sheets[ i ].href && sheets[ i ].href.indexOf( href ) > -1 ){
+				defined = true;
+			}
+		}
+		if( defined ){
+			ss.media = media || "all";
+		}
+		else {
+			setTimeout( toggleMedia );
+		}
+	}
+	toggleMedia();
+	return ss;
+}
+//Support Woff2
+var supportsWoff2 = (function( win ){
+	if( !( "FontFace" in win ) ) {
+		return false;
+	}
+	var f = new win.FontFace( "t", 'url( "data:application/font-woff2," ) format( "woff2" )', {} );
+	f.load().catch(function() {});
+	return f.status == 'loading';
+})( window );
+// load default font (woff)
+var ua = navigator.userAgent,
+	fontFileUrlMaven = document.getElementById('fontPath').value+"maven-pro-woff.css",
+	fontFileUrlOpenSans = document.getElementById('fontPath').value+"open-sans-woff.css",
+	fontFileUrlPoppins = document.getElementById('fontPath').value+"poppins-woff.css",
+	fontFileUrlTitilliumWeb = document.getElementById('fontPath').value+"titillium-web-woff.css";
+if( supportsWoff2 ) {
+	fontFileUrlMaven = document.getElementById('fontPath').value+"maven-pro-woff2.css";
+	fontFileUrlOpenSans = document.getElementById('fontPath').value+"open-sans-woff2.css";
+	fontFileUrlPoppins = document.getElementById('fontPath').value+"poppins-woff2.css";
+	fontFileUrlTitilliumWeb = document.getElementById('fontPath').value+"titillium-web-woff2.css";		
+// sometimes you have to do the bad thing.  Â¯\_(ã)_/Â¯
+//  ttf if non-chrome android webkit browser
+} else if( ua.indexOf( "Android" ) > -1 && ua.indexOf( "like Gecko" ) > -1 && ua.indexOf( "Chrome" ) === -1 ){
+	fontFileUrlMaven = document.getElementById('fontPath').value+"maven-pro-ttf.css";
+	fontFileUrlOpenSans = document.getElementById('fontPath').value+"open-sans-ttf.css";
+	fontFileUrlPoppins = document.getElementById('fontPath').value+"poppins-ttf.css";
+	fontFileUrlTitilliumWeb = document.getElementById('fontPath').value+"titillium-web-ttf.css";			
+}
+if(document.getElementById('useGoogleFonts').value == 'false'){
+	loadCSS( fontFileUrlMaven );
+	loadCSS( fontFileUrlOpenSans );
+	loadCSS( fontFileUrlPoppins );
+	loadCSS( fontFileUrlTitilliumWeb );	
+}
+</script>
+<script>
+    // Detect if user is on IE browser
+    var isIE = !!window.MSInputMethodContext && !!document.documentMode;
+    if (isIE) {
+        // Create Promise polyfill script tag
+        var promiseScript = document.createElement("script");
+        promiseScript.type = "text/javascript";
+        promiseScript.src =
+                "images_subdomain/is/content/lennoxintl/web-dev/other/cirrus/promise-polyfill.js";
+        // Create Fetch polyfill script tag
+        var fetchScript = document.createElement("script");
+        fetchScript.type = "text/javascript";
+        fetchScript.src =
+                "images_subdomain/is/content/lennoxintl/web-dev/other/cirrus/fetch-polyfill.js";
+        // Add polyfills to head element
+        document.head.appendChild(promiseScript);
+        document.head.appendChild(fetchScript);
+    }
+</script><script type="text/javascript" src="_ui/desktop/theme-lennoxpro/js/minified/common.min.js"></script>
+    <script type="text/javascript" src="_ui/desktop/theme-lennoxpro/js/acc.myorder.js"></script>
+    <script async defer src="maps/api/js_libraries_places_key_aizasydad-q-insgk_fscf0mf6ujiffl6spcqqk.js"></script>
+    <!-- Added tracking code for Pardot -->
+    <script type="text/javascript">
+            piAId = '626061';
+            piCId = '1939';
+            piHostname = 'pi.pardot.com';
+            (function() {
+                function async_load() {
+                    var s = document.createElement('script');
+                    s.type = 'text/javascript';
+                    s.src = ('https:' == document.location.protocol ? 'https://pi' : 'http://cdn') + '.pardot.com/pd.js';
+                    var c = document.getElementsByTagName('script')[0];
+                    c.parentNode.insertBefore(s, c);
+                }
+                if (window.attachEvent) {
+                    window.attachEvent('onload', async_load);
+                } else {
+                    window.addEventListener('load', async_load, false);
+                }
+            })();
+        </script>
+    <!-- End Pardot tracking code -->
+    <script type="text/javascript">
+        window.dataLayer = window.dataLayer || [];
+        </script>
+    <script type="text/javascript">
+            var ua = window.navigator.userAgent.toLowerCase();
+            var isiPad = (ua.indexOf('ipad') > -1) || (ua.indexOf('macintosh') > -1) && ('ontouchend' in document);
+            var isAndroidTab = (ua.indexOf('android') > -1) && !(ua.indexOf("mobile") > -1)
+            var isInSession = "";
+            if(window.location.href.indexOf("registration") <= -1){
+                if(isInSession !== "true"){
+                    if((window.innerWidth>650 && (isiPad || isAndroidTab) )){
+                        var tempHref = window.location.origin.replace('www','m');
+                        window.location.href = tempHref;
+                    }
+                }
+            }
+        </script>
+    <script type="text/javascript">
+        setTimeout(
+                function() {
+                    var a = document.createElement("script");
+                    var b = document.getElementsByTagName("script")[0];
+                    a.src = document.location.protocol
+                            + "pages/scripts/0051/7079.js"
+                            + Math
+                                    .floor(new Date().getTime() / 3600000);
+                    a.async = true;
+                    a.type = "text/javascript";
+                    b.parentNode.insertBefore(a, b)
+                }, 1);
+    </script>
+</head>
+<body class="page-page-000044X4 pageType-ContentPage template-lennoxpages-common-generalContent pageLabel--superheat-subcooling-calculator smartedit-page-uid-page_000044X4 smartedit-page-uuid-eyJpdGVtSWQiOiJwYWdlXzAwMDA0NFg0IiwiY2F0YWxvZ0lkIjoibGVubm94cHJvQ29udGVudENhdGFsb2ciLCJjYXRhbG9nVmVyc2lvbiI6Ik9ubGluZSJ9 smartedit-catalog-version-uuid-lennoxproContentCatalog/Online  language-en" onunload>
+<div id="nearby-leads-popup" class="hide">
+</div>
+<input type="hidden" id="nearByLeadsPopup-userAgent" value="false"/>
+<!-- Google Tag Manager -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-5LR42R"
+                  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-5LR42R');</script>
+<!-- End Google Tag Manager -->
+<div id="page" class="page-wrap gor-page-container" data-currency-iso-code="USD">
+        		<!--  Banner Message End -->
+<header class="header-container gor-header-container new-header" role="banner">
+
+<!--  Banner Message Start-->
+		<!-- Banner Message End -->         	
+        <div id="content" class="main-content gor-main-content homepage-v2-content-container">
+            <div class="cirrus">
+				<div class="container-xxl px-0">
+					<nav class="cirrus" aria-label="breadcrumb">
+						<ol class="breadcrumb">
+							<li class="breadcrumb-item pl-0"><a href="/">Home</a></li>
+										</li>
+							</ol>
+					</nav>
+				</div>
+			</div>
+		<div class="popup-background"></div> 
+            <div id="globalMessages">
+    </div>
+  <div class="yCmsContentSlot">
+<div class="content"><style>
+    .btn{display:inline-block;font-weight:600;text-align:center;white-space:normal;vertical-align:middle;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;border:2px solid transparent;padding:8px 30px;font-size:1rem;line-height:1.5;overflow:visible;text-transform:uppercase;transition:color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out}.btn i.btn-left{padding-right:10px}.btn i.btn-right{padding-left:10px}.btn-icon{padding:8px 15px}.btn-primary{color:#fff;background-color:#0057c9;border-color:#0057c9}.btn-primary.active,.btn-primary:hover{color:#fff;background-color:#8b0013;border-color:#8b0013}.btn-secondary{color:#0057c9;background-color:#fff;border-color:#666}.btn-secondary.active,.btn-secondary:hover{color:#fff;background-color:#0057c9;border-color:#0057c9}.btn-tertiary{color:#666;background-color:#fff;border-color:#666}.btn-tertiary.active,.btn-tertiary:hover{color:#fff;background-color:#0057c9;border-color:#0057c9}.btn-link{color:#222;background-color:#fff;padding:0;font-weight:inherit;border:inherit;text-transform:inherit;font-size:inherit;line-height:inherit;text-align:inherit}.btn:focus,.btn:hover{text-decoration:none}.btn.disabled{cursor:not-allowed;background-color:#666;border-color:#666;color:#fff!important}@media screen and (max-width:767px){.btn-hide-mobile{padding:8px 15px}.btn-hide-mobile>span{display:none}.btn-hide-mobile i.btn-left{padding-right:0}.btn-hide-mobile i.btn-right{padding-left:0}}.btn-lg{min-width:300px}.slide-toggle{background-color:#0057c9;padding:4px;font-size:14px;vertical-align:middle;color:#fff;transition:all .2s ease;position:relative;font-weight:700}.slide-toggle.rounded,.slide-toggle.rounded .slide-toggle-marker,.slide-toggle.rounded .slide-toggle-option{border-radius:50px}.slide-toggle.rounded .slide-toggle-option:focus{outline:0}.slide-toggle-marker,.slide-toggle-option{padding:5px 20px;transition:all .2s ease;cursor:pointer;width:115px;display:inline-block;text-align:center;position:relative;z-index:20}.slide-toggle-marker{background-color:#fff;position:absolute;z-index:15;top:4px;left:4px}.slide-toggle-option.active{color:#0057c9}.slide-toggle-marker.left{transform:translateX(0)}.slide-toggle-marker.right{transform:translateX(118px)}.d-inline-block{display:inline-block}.flexbox{display:flex;flex-wrap:wrap}.align-items-center{align-items:center}.justify-content-center{justify-content:center}.strong{font-weight:600}.new-page-container{font-size:16px}.new-page-container input::-webkit-input-placeholder{color:#e1e1e1}.new-page-container input::-moz-placeholder{color:#e1e1e1}.new-page-container input:-ms-input-placeholder{color:#e1e1e1}.new-page-container input:-moz-placeholder{color:#e1e1e1}.new-page-container input[type=number]{text-align:left}.align-right{text-align:right}.align-left{text-align:left}.button-link{text-decoration:underline;font-weight:400;background-color:#fff;color:#222}.button-link:focus,.button-link:hover{background-color:#fff;color:#000}.mb-30{margin-bottom:30px!important}.mb-60{margin-bottom:60px!important}.d-none{display:none!important}.header-bg{background-color:#222;background-image:url(images_subdomain/is/image/lennoxintl/1807-the-troubleshooter-header-bg2-c_scl_1_fmt_png-alpha.png);background-position:center;background-size:cover;color:#fff;padding:25px 0;text-align:center;margin-bottom:30px}.header-bg h1{margin:0 0 15px 0;color:#fff}.header-bg .scsh-app-subhead{display:none}.pt-calc-container{max-width:700px;margin:0 auto}.pt-calc-container p{margin-bottom:5px}.pt-calc-container input{margin-bottom:30px;outline:0 solid #0057c9;transition:all .3s ease}.new-page-container input.missingValue{border:1px solid #0057c9;outline:4px solid #0057c9;outline-offset:-4px}.pt-calc-header div{margin-bottom:45px}.refrigerant-type-container{margin-bottom:30px}.refrigerant-type-container img{opacity:.3;transition:opacity .2s ease}.refrigerant-type-container img.active{opacity:1}.calc-container p{font-weight:600;color:#222}.calc-container sup{opacity:0;font-size:10px;transition:opacity .3s ease;display:none}.calc-container sup.active{opacity:1}.calc-container .col-md-4{padding:0 20px}.output-container{text-align:center}.pt-calc-results-box{border:1px solid #bbb;border-radius:5px;padding:30px 5px}.pt-calc-results-box p{font-weight:600}.pt-calc-results-box span{font-size:60px;color:#0057c9;display:block;line-height:1em}.pt-calc-back-btn{text-align:left}.visible-desktop{display:none}@media screen and (min-width:768px){.visible-desktop{display:block}}@media screen and (max-width:350px){.calc-container p{font-size:15px}}
+</style>
+<div class="new-page-container">
+    <div class="header-bg">
+        <div class="container">
+            <h1>Superheat and Subcooling Calculator</h1>
+            <p class="scsh-app-subhead">Quickly calculate Superheat, and Subcooling measurements for R407C & R410A refrigerants.</p>
+        </div><!-- end container -->
+    </div><!-- end header bg -->
+    <div class="container">
+        <div class="pt-calc-container mb-60">
+            <div class="pt-calc-start">
+            <div class="refrigerant-type-container">
+                <div class="row flexbox align-items-center">
+                    <div class="col-sm-12 align-center">
+                        <div class="slide-toggle rounded d-inline-block">
+                            <span class="slide-toggle-marker left">&nbsp;</span>
+                            <span class="slide-toggle-option active" tabindex="0">R410A</span>
+                            <span class="slide-toggle-option" tabindex="0">R407C</span>
+                        </div><!-- end slide toggle -->
+                    </div><!-- end col -->
+                    <div class="col-lg-3 visible-desktop d-none">
+                        <div><img src="https://images.lennoxpros.com/is/image/LennoxIntl/80N84?$product_related$" alt="" class="active" data-prod="R410A"></div>
+                    </div><!-- end col -->
+                    <div class="col-lg-3 visible-desktop d-none">
+                        <div><img src="https://images.lennoxpros.com/is/image/LennoxIntl/18P02?$product_related$" alt="" class="" data-prod="R407C"></div>
+                    </div><!-- end col -->
+                </div><!-- end row -->
+            </div><!-- end refrigerant type -->
+                <div class="pt-calc-end" style="display: none;">
+                    <div class="output-container">
+                        <p class="align-left mb-60 d-none">
+                            <button class="pt-calc-back-btn button button-default button-link"><i class="fal fa-angle-left"></i> Back</button>
+                        </p>
+                        <div class="row mb-30 d-none">
+                            <div class="col-md-1"></div>
+                            <div class="col-md-5">
+                                <p>Saturated Suction Temp: <span id="saturatedSuctionTemp" class="strong">N/A</span></p>
+                            </div><!-- end col -->
+                            <div class="col-md-5">
+                                <p>Saturated Discharge Temp: <span id="saturatedDischargeTemp" class="strong">N/A</span></p>
+                            </div><!-- end col -->
+                            <div class="col-md-1"></div>
+                        </div><!-- end row -->
+                        <div class="row flexbox justify-content-center mb-60">
+                            <div class="col-md-4 col-sm-6">
+                                <div class="pt-calc-results-box">
+                                    <p>Sub Cool:</p>
+                                    <div><span id="subCool">N/A</span></div>
+                                </div>
+                            </div><!-- end col -->
+                            <div class="col-md-4 col-sm-6">
+                                <div class="pt-calc-results-box">
+                                    <p>Super Heat:</p>
+                                    <div><span id="superHeat">N/A</span></div>
+                                </div>
+                            </div><!-- end col -->
+                            <div class="col-md-4 d-none">
+                                <div class="pt-calc-results-box">
+                                    <p>Approach:</p>
+                                    <div><span id="approach">N/A</span></div>
+                                </div>
+                            </div><!-- end col -->
+                        </div><!-- end row -->
+                        <div class="d-none">
+                            <button id="btn-reset-calc" class="btn btn-tertiary btn-lg">Reset</button>
+                        </div>
+                    </div><!-- end calc container -->
+                </div><!-- end pt calc end -->
+            <div class="calc-container">
+                <div class="row flexbox justify-content-center">
+                    <div class="col-md-4 col-sm-6 d-none">
+                        <p>Outdoor Temp <sup></sup></p>
+                        <input type="number" id="outdoorTemp" placeholder="70">
+                        <p>Indoor Temp <sup></sup></p>
+                        <input type="number" id="indoorTemp" placeholder="80">
+                    </div><!-- end col -->
+                    <div class="col-md-4 col-sm-6">
+                        <p>Suction PSI <sup>*Required</sup></p>
+                        <input type="number" id="suctionPSI" placeholder="20" data-required="true">
+                        <p>Liquid Line PSI <sup>*Required</sup></p>
+                        <input type="number" id="dischargePSI" placeholder="20" data-required="true">
+                    </div><!-- end col -->
+                    <div class="col-md-4 col-sm-6">
+                        <p>Suction Line Temp <sup>*Required</sup></p>
+                        <input type="number" id="suctionLineTemp" placeholder="20" data-required="true">
+                        <p>Liquid Line Temp <sup>*Required</sup></p>
+                        <input type="number" id="dischargeLineTemp" placeholder="20" data-required="true">
+                    </div><!-- end col -->
+                </div><!-- end row -->
+            </div><!-- end calc container -->
+                <div class="align-center">
+                    <button id="calculate-pt" class="btn btn-primary">Calculate</button>
+                </div>
+            </div><!-- end pt calc start -->
+        </div><!-- end pt calc container -->
+    </div><!-- end container -->
+</div><!-- end new page container -->
+<script>
+    var ptCalcData=[["-14","-117","-143"],["-13","-98","-124"],["-12","-86","-112"],["-11","-78","-104"],["-10","-71","-97"],["-9","-65","-92"],["-8","-61","-87"],["-7","-56","-82"],["-6","-52","-79"],["-5","-49","-75"],["-4","-45","-72"],["-3","-42","-69"],["-2","-39","-66"],["-1","-37","-63"],["0","-34","-61"],["1","-32","-59"],["2","-29","-56"],["3","-27","-54"],["4","-25","-52"],["5","-23","-50"],["6","-21","-48"],["7","-19","-46"],["8","-17","-45"],["9","-16","-43"],["10","-14","-41"],["11","-12","-40"],["12","-11","-38"],["13","-9","-37"],["14","-7","-35"],["15","-6","-34"],["16","-5","-33"],["17","-3","-31"],["18","-2","-30"],["19","0","-29"],["20","1","-27"],["21","2","-26"],["22","3","-25"],["23","5","-24"],["24","6","-23"],["25","7","-22"],["26","8","-20"],["27","9","-19"],["28","10","-18"],["29","11","-17"],["30","13","-16"],["31","14","-15"],["32","15","-14"],["33","16","-13"],["34","17","-12"],["35","18","-11"],["36","19","-10"],["37","20","-10"],["38","21","-9"],["39","21","-8"],["40","22","-7"],["41","23","-6"],["42","24","-5"],["43","25","-4"],["44","26","-4"],["45","27","-3"],["46","28","-2"],["47","28","-1"],["48","29","0"],["49","30","0"],["50","31","1"],["51","32","2"],["52","32","3"],["53","33","3"],["54","34","4"],["55","35","5"],["56","36","6"],["57","36","6"],["58","37","7"],["59","38","8"],["60","38","8"],["61","39","9"],["62","40","10"],["63","41","10"],["64","41","11"],["65","42","12"],["66","43","12"],["67","43","13"],["68","44","14"],["69","45","14"],["70","45","15"],["71","46","16"],["72","47","16"],["73","47","17"],["74","48","17"],["75","49","18"],["76","49","19"],["77","50","19"],["78","50","20"],["79","51","20"],["80","52","21"],["81","52","21"],["82","53","22"],["83","53","23"],["84","54","23"],["85","54","24"],["86","55","24"],["87","56","25"],["88","56","25"],["89","57","26"],["90","57","26"],["91","58","27"],["92","58","27"],["93","59","28"],["94","59","28"],["95","60","29"],["96","61","29"],["97","61","30"],["98","62","30"],["99","62","31"],["100","63","31"],["101","63","32"],["102","64","32"],["103","64","33"],["104","65","33"],["105","65","34"],["106","66","34"],["107","66","35"],["108","67","35"],["109","67","36"],["110","68","36"],["111","68","37"],["112","69","37"],["113","69","38"],["114","70","38"],["115","70","38"],["116","70","39"],["117","71","39"],["118","71","40"],["119","72","40"],["120","72","41"],["121","73","41"],["122","73","42"],["123","74","42"],["124","74","42"],["125","75","43"],["126","75","43"],["127","75","44"],["128","76","44"],["129","76","45"],["130","77","45"],["131","77","45"],["132","78","46"],["133","78","46"],["134","78","47"],["135","79","47"],["136","79","47"],["137","80","48"],["138","80","48"],["139","80","49"],["140","81","49"],["141","81","49"],["142","82","50"],["143","82","50"],["144","83","51"],["145","83","51"],["146","83","51"],["147","84","52"],["148","84","52"],["149","84","52"],["150","85","53"],["151","85","53"],["152","86","54"],["153","86","54"],["154","86","54"],["155","87","55"],["156","87","55"],["157","88","55"],["158","88","56"],["159","88","56"],["160","89","56"],["161","89","57"],["162","89","57"],["163","90","58"],["164","90","58"],["165","90","58"],["166","91","59"],["167","91","59"],["168","92","59"],["169","92","60"],["170","92","60"],["171","93","60"],["172","93","61"],["173","93","61"],["174","94","61"],["175","94","62"],["176","94","62"],["177","95","62"],["178","95","63"],["179","95","63"],["180","96","63"],["181","96","64"],["182","96","64"],["183","97","64"],["184","97","65"],["185","97","65"],["186","98","65"],["187","98","66"],["188","98","66"],["189","99","66"],["190","99","67"],["191","99","67"],["192","100","67"],["193","100","68"],["194","100","68"],["195","101","68"],["196","101","68"],["197","101","69"],["198","102","69"],["199","102","69"],["200","102","70"],["201","103","70"],["202","103","70"],["203","103","71"],["204","104","71"],["205","104","71"],["206","104","72"],["207","104","72"],["208","105","72"],["209","105","72"],["210","105","73"],["211","106","73"],["212","106","73"],["213","106","74"],["214","107","74"],["215","107","74"],["216","107","74"],["217","107","75"],["218","108","75"],["219","108","75"],["220","108","76"],["221","109","76"],["222","109","76"],["223","109","77"],["224","109","77"],["225","110","77"],["226","110","77"],["227","110","78"],["228","111","78"],["229","111","78"],["230","111","78"],["231","111","79"],["232","112","79"],["233","112","79"],["234","112","80"],["235","113","80"],["236","113","80"],["237","113","80"],["238","113","81"],["239","114","81"],["240","114","81"],["241","114","81"],["242","115","82"],["243","115","82"],["244","115","82"],["245","115","83"],["246","116","83"],["247","116","83"],["248","116","83"],["249","116","84"],["250","117","84"],["251","117","84"],["252","117","84"],["253","117","85"],["254","118","85"],["255","118","85"],["256","118","85"],["257","118","86"],["258","119","86"],["259","119","86"],["260","119","86"],["261","120","87"],["262","120","87"],["263","120","87"],["264","120","87"],["265","121","88"],["266","121","88"],["267","121","88"],["268","121","88"],["269","122","89"],["270","122","89"],["271","122","89"],["272","122","89"],["273","123","90"],["274","123","90"],["275","123","90"],["276","123","90"],["277","124","91"],["278","124","91"],["279","124","91"],["280","124","91"],["281","125","92"],["282","125","92"],["283","125","92"],["284","125","92"],["285","125","93"],["286","126","93"],["287","126","93"],["288","126","93"],["289","126","94"],["290","127","94"],["291","127","94"],["292","127","94"],["293","127","94"],["294","128","95"],["295","128","95"],["296","128","95"],["297","128","95"],["298","129","96"],["299","129","96"],["300","129","96"],["301","129","96"],["302","129","97"],["303","130","97"],["304","130","97"],["305","130","97"],["306","130","97"],["307","131","98"],["308","131","98"],["309","131","98"],["310","131","98"],["311","132","99"],["312","132","99"],["313","132","99"],["314","132","99"],["315","132","99"],["316","133","100"],["317","133","100"],["318","133","100"],["319","133","100"],["320","134","101"],["321","134","101"],["322","134","101"],["323","134","101"],["324","134","101"],["325","135","102"],["326","135","102"],["327","135","102"],["328","135","102"],["329","135","103"],["330","136","103"],["331","136","103"],["332","136","103"],["333","136","103"],["334","137","104"],["335","137","104"],["336","137","104"],["337","137","104"],["338","137","104"],["339","138","105"],["340","138","105"],["341","138","105"],["342","138","105"],["343","138","105"],["344","139","106"],["345","139","106"],["346","139","106"],["347","139","106"],["348","139","107"],["349","140","107"],["350","140","107"],["351","140","107"],["352","140","107"],["353","140","108"],["354","141","108"],["355","141","108"],["356","141","108"],["357","141","108"],["358","142","109"],["359","142","109"],["360","142","109"],["361","142","109"],["362","142","109"],["363","143","110"],["364","143","110"],["365","143","110"],["366","143","110"],["367","143","110"],["368","143","111"],["369","144","111"],["370","144","111"],["371","144","111"],["372","144","111"],["373","144","112"],["374","145","112"],["375","145","112"],["376","145","112"],["377","145","112"],["378","145","113"],["379","146","113"],["380","146","113"],["381","146","113"],["382","146","113"],["383","146","113"],["384","147","114"],["385","147","114"],["386","147","114"],["387","147","114"],["388","147","114"],["389","148","115"],["390","148","115"],["391","148","115"],["392","148","115"],["393","148","115"],["394","149","116"],["395","149","116"],["396","149","116"],["397","149","116"],["398","149","116"],["399","149","116"],["400","150","117"],["401","150","117"],["402","150","117"],["403","150","117"],["404","150","117"],["405","151","118"],["406","151","118"],["407","151","118"],["408","151","118"],["409","151","118"],["410","151","119"],["411","152","119"],["412","152","119"],["413","152","119"],["414","152","119"],["415","152","119"],["416","153","120"],["417","153","120"],["418","153","120"],["419","153","120"],["420","153","120"],["421","153","121"],["422","154","121"],["423","154","121"],["424","154","121"],["425","154","121"],["426","154","121"],["427","155","122"],["428","155","122"],["429","155","122"],["430","155","122"],["431","155","122"],["432","155","122"],["433","156","123"],["434","156","123"],["435","156","123"],["436","156","123"],["437","156","123"],["438","156","124"],["439","157","124"],["440","157","124"],["441","157","124"],["442","157","124"],["443","157","124"],["444","158","125"],["445","158","125"],["446","158","125"],["447","158","125"],["448","158","125"],["449","158","125"],["450","159","126"],["451","159","126"],["452","159","126"],["453","159","126"],["454","159","126"],["455","159","126"],["456","160","127"],["457","160","127"],["458","160","127"],["459","160","127"],["460","160","127"],["461","160","127"],["462","161","128"],["463","161","128"],["464","161","128"],["465","161","128"],["466","161","128"],["467","161","128"],["468","162","129"],["469","162","129"],["470","162","129"],["471","162","129"],["472","162","129"],["473","162","129"],["474","163","130"],["475","163","130"],["476","163","130"],["477","163","130"],["478","163","130"],["479","163","130"],["480","164","131"],["481","164","131"],["482","164","131"],["483","164","131"],["484","164","131"],["485","164","131"],["486","165","132"],["487","165","132"],["488","165","132"],["489","165","132"],["490","165","132"],["491","165","132"],["492","166","132"],["493","166","133"],["494","166","133"],["495","166","133"],["496","166","133"],["497","166","133"],["498","167","133"],["499","167","134"],["500","167","134"]],
+    refrigerantType=2,ptCalcTitle=document.querySelector(".pt-calc-header h1 span"),typeLimit=2,outdoorTemp=document.getElementById("outdoorTemp"),indoorTemp=document.getElementById("indoorTemp"),suctionPSI=document.getElementById("suctionPSI"),dischargePSI=document.getElementById("dischargePSI"),suctionLineTemp=document.getElementById("suctionLineTemp"),dischargeLineTemp=document.getElementById("dischargeLineTemp"),saturatedSuctionTemp=document.getElementById("saturatedSuctionTemp"),saturatedDischargeTemp=document.getElementById("saturatedDischargeTemp"),subCool=document.getElementById("subCool"),superHeat=document.getElementById("superHeat"),approach=document.getElementById("approach"),ptCalcInputs=document.querySelectorAll(".pt-calc-container input"),ptCalcErroMsgs=document.querySelectorAll(".pt-calc-container .col-md-4 p sup"),subHeadMsg=document.querySelector(".scsh-app-subhead");if(!("undefined"!=typeof Storage))$(".scsh-app-subhead").slideDown(),console.log("no storage");else if(null===localStorage.getItem("scsh-app-subhead"))$(".scsh-app-subhead").slideDown(),localStorage.setItem("scsh-app-subhead","1"),console.log("creating new log");else if(11>parseInt(localStorage.getItem("scsh-app-subhead"))){var visitCounter=parseInt(localStorage.getItem("scsh-app-subhead"));visitCounter++,localStorage.setItem("scsh-app-subhead",visitCounter),console.log("log updated"),$(".scsh-app-subhead").slideDown()}else{var visitCounter=parseInt(localStorage.getItem("scsh-app-subhead"));visitCounter++,localStorage.setItem("scsh-app-subhead",visitCounter),console.log("too many visits")}$(".pt-calc-back-btn").click(function(){$(".pt-calc-end").slideDown(200)}),$("#calculate-pt").click(function(){for(var a=!1,b=0;b<ptCalcInputs.length;b++)"true"===ptCalcInputs[b].getAttribute("data-required")&&1>ptCalcInputs[b].value.length?(a=!0,ptCalcInputs[b].setAttribute("class","missingValue"),ptCalcErroMsgs[b].setAttribute("class","active")):(ptCalcInputs[b].setAttribute("class",""),ptCalcErroMsgs[b].setAttribute("class",""));if(!1===a){for(var b=0;b<ptCalcErroMsgs.length;b++)ptCalcInputs[b].setAttribute("class",""),ptCalcErroMsgs[b].setAttribute("class","");for(var b=0;b<ptCalcInputs.length;b++)calculatePT(ptCalcInputs[b]);$(".pt-calc-end").slideDown(200)}}),$("#btn-reset-calc").click(function(){for(var a=0;a<ptCalcInputs.length;a++)ptCalcInputs[a].value="";for(var a=0;a<$(".output-container span").length;a++)$(".output-container span").text("N/A");$(".pt-calc-end").slideDown(200)});function tableLookup(a,b){for(var c="",d=!1,e=0;e<ptCalcData.length&&(ptCalcData[e][0]===a&&(c=ptCalcData[e][b],d=!0),!d);e++);return c}function superHeatSubCool(a){var b;"heat"===a?(b=parseInt(suctionLineTemp.value)-parseInt(saturatedSuctionTemp.innerText),isNaN(b)?superHeat.innerText="N/A":$("#superHeat").prop("Counter",superHeat.innerText).animate({Counter:b},{duration:750,easing:"swing",step:function(a){$(this).text(Math.ceil(a))}})):(b=parseInt(saturatedDischargeTemp.innerText)-parseInt(dischargeLineTemp.value),isNaN(b)?subCool.innerText="N/A":$("#subCool").prop("Counter",subCool.innerText).animate({Counter:b},{duration:750,easing:"swing",step:function(a){$(this).text(Math.ceil(a))}}))}function approachCalc(){var a=parseInt(dischargeLineTemp.value)-parseInt(outdoorTemp.value);approach.innerText=isNaN(a)?"N/A":a}function calculatePT(a){if(!isNaN(a.value))switch(a.id){case"outdoorTemp":approachCalc();break;case"indoorTemp":break;case"suctionPSI":saturatedSuctionTemp.innerText=tableLookup(a.value,refrigerantType),superHeatSubCool("heat");break;case"dischargePSI":saturatedDischargeTemp.innerText=tableLookup(a.value,refrigerantType),superHeatSubCool("cool");break;case"suctionLineTemp":superHeatSubCool("heat");break;case"dischargeLineTemp":superHeatSubCool("cool"),approachCalc();}}for(var i=0;i<ptCalcInputs.length;i++)ptCalcInputs[i].addEventListener("keyup",function(){console.log(this.value),0<this.value.length?(console.log("removing stuff: ",this.value),this.setAttribute("class",""),this.setAttribute("class","")):console.log("no response")});var slideToggles=document.querySelectorAll(".slide-toggle");function toggleActiveClass(a){for(var b,c=a.parentNode,d=c.querySelectorAll(".active"),e=0;e<d.length;e++)b=d[e].getAttribute("class"),b=b.replace(/\b active\b/g,""),d[e].setAttribute("class",b);a.className+=" active"}function resetSliderImages(){for(var a=document.querySelectorAll(".refrigerant-type-container img"),b=0;b<a.length;b++)a[b].setAttribute("class","")}for(var slideToggleOptions,i=0;i<slideToggles.length;i++){slideToggleOptions=slideToggles[i].querySelectorAll(".slide-toggle-option");for(var ii=0;ii<slideToggleOptions.length;ii++)slideToggleOptions[ii].addEventListener("click",function(){if(-1<this.className.indexOf("active"));else{toggleActiveClass(this);var a=this.innerText;"R407C"===a?refrigerantType=1:"R410A"===a&&(refrigerantType=2);var b=document.querySelector(".refrigerant-type-container img[data-prod='"+a+"']");resetSliderImages(),b.setAttribute("class","active");for(var c=0;c<ptCalcInputs.length;c++)calculatePT(ptCalcInputs[c]);var d=this.parentNode.querySelector(".slide-toggle-marker"),e=d.className;-1<e.indexOf("left")?(e=e.replace(/\b left\b/g,""),d.setAttribute("class",e+" right")):(e=e.replace(/\b right\b/g,""),d.setAttribute("class",e+" left"))}})}
+</script></div></div></div>
+<div class="moby shade select-lead-model" id="select-lead-model">
+            <div class="moby-inner">
+                <a href="javascript:void(0);" class="close" data-moby="hide" data-target="#select-lead-model"></a>
+                <div class="lead-select-wpr">
+                    <div class="lead-select-left lead-select-inn">
+                        <h5>Would you like to create a proposal for a new lead?</h5>
+                        <div class="button-set">
+                        	<a href="proposal-tool/lead/create.html" class="button button-default create-lead-btn">CREATE LEAD & PROPOSAL</a>
+                        </div>
+                    </div>
+                    <div class="lead-select-right lead-select-inn">
+                        <h5>Would you like to create a proposal for existing lead?</h5>
+                        <div class="button-set">
+                            <form id="command" action="proposal-tool/search/leads.html" method="post">
+								<button type="submit" data-target="#login-modal" data-moby="show" class="LACKS_AUTHENTICATION button button-default create-lead-btn">SELECT LEAD</button>
+								<div>
+<input type="hidden" name="CSRFToken" value="0bfb6862-aede-4ef1-88c5-e41c91332c28" />
+</div></form>                            	
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+</div>
+<script>
+    // Insert any number of products that should be disabled
+    // These must be uppercase! Do not use '12u67' with a lowercase letter or Quick Order will fail.
+    var emergencyDisabledProducts = ['19V30'];
+    /* **************************
+           Polyfills for IE
+    ************************** */
+    // Polyfill for Array.prototype.includes()
+    // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/includes#polyfill
+    if (!String.prototype.includes) {String.prototype.includes = function(search, start) {'use strict'; if (search instanceof RegExp) {throw TypeError('first argument must not be a RegExp');}if (start === undefined) { start = 0; }return this.indexOf(search, start) !== -1;};}
+    // Polyfill for Node.remove();
+    // https://developer.mozilla.org/en-US/docs/Web/API/ChildNode/remove#polyfill
+    (function (arr) {arr.forEach(function (item) {if (item.hasOwnProperty('remove')) {return;}Object.defineProperty(item, 'remove', {configurable: true,enumerable: true, writable: true, value: function remove() {this.parentNode.removeChild(this);}});});})([Element.prototype, CharacterData.prototype, DocumentType.prototype]);
+    // Polyfill for Array.from();
+    // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/from#polyfill
+    if (!Array.from) {Array.from = (function () {var symbolIterator;try {symbolIterator = Symbol.iterator ? Symbol.iterator : 'Symbol(Symbol.iterator)';} catch (e) {symbolIterator = 'Symbol(Symbol.iterator)';}var toStr = Object.prototype.toString;var isCallable = function (fn) {return (typeof fn === 'function' || toStr.call(fn) === '[object Function]');};var toInteger = function (value) {var number = Number(value);if (isNaN(number)) return 0;if (number === 0 || !isFinite(number)) return number;return (number > 0 ? 1 : -1) * Math.floor(Math.abs(number));};var maxSafeInteger = Math.pow(2, 53) - 1;var toLength = function (value) {var len = toInteger(value);return Math.min(Math.max(len, 0), maxSafeInteger);};var setGetItemHandler = function setGetItemHandler(isIterator, items) {var iterator = isIterator && items[symbolIterator]();return function getItem(k) {return isIterator ? iterator.next() : items[k];};};var getArray = function getArray(T,A,len,getItem,isIterator,mapFn) {var k = 0;while (k < len || isIterator) {var item = getItem(k);var kValue = isIterator ? item.value : item;if (isIterator && item.done) {return A;} else {if (mapFn) {A[k] = typeof T === 'undefined' ? mapFn(kValue, k) : mapFn.call(T, kValue, k);} else {A[k] = kValue;}}k += 1;}if (isIterator) {throw new TypeError('Array.from: provided arrayLike or iterator has length more then 2 ** 52 - 1');} else {A.length = len;}return A;};return function from(arrayLikeOrIterator) {var C = this;var items = Object(arrayLikeOrIterator);var isIterator = isCallable(items[symbolIterator]);if (arrayLikeOrIterator == null && !isIterator) {throw new TypeError('Array.from requires an array-like object or iterator - not null or undefined');}var mapFn = arguments.length > 1 ? arguments[1] : void undefined;var T;if (typeof mapFn !== 'undefined') {if (!isCallable(mapFn)) {throw new TypeError('Array.from: when provided, the second argument must be a function');}if (arguments.length > 2) {T = arguments[2];}}var len = toLength(items.length);var A = isCallable(C) ? Object(new C(len)) : new Array(len);return getArray(T, A, len, setGetItemHandler(isIterator, items), isIterator, mapFn);};})();}
+    // Polyfill for Array.prototype.forEach()
+    // https://gist.github.com/bob-lee/e7520bfcdac266e5490f40c2759cc955
+    if (window.NodeList && !NodeList.prototype.forEach) {NodeList.prototype.forEach = function (callback, thisArg) {thisArg = thisArg || window;for (var i = 0; i < this.length; i++) {callback.call(thisArg, this[i], i, this);}};}
+    // JS doesnt have a native element.insertAfter() function
+    function insertCustomAlert(newNode, referenceNode) {referenceNode.parentNode.insertBefore(newNode, referenceNode.nextSibling);}
+    /* **************************
+         Reusable Functions
+    ************************** */
+    function createEmergencyProductAlert(htmlContent) {
+        var emergencyAlertContainer = document.createElement("div");
+        emergencyAlertContainer.classList.add("cirrus");
+        emergencyAlertContainer.innerHTML = htmlContent;
+        return emergencyAlertContainer;
+    }
+    // Function to show PLP Messaging on PLP and Search pages
+    function generateDisabledProductMessagePLP(product) {
+        // Find the product item (<li>)
+        var productPLPColumn = document.querySelector("[data-product-id='" + product + "']");
+        // Hide the shipping information
+        var shippingElement = productPLPColumn.querySelector(".OT-Product-Shipping-Pickup");
+        shippingElement.style.display = "none";
+        // This is a Cirrus alert
+        var disabledProductPLPMessage = "<div class='alert alert-warning emergency-product-alert-bar mb-5 mx-auto' role='alert' style='padding:10px 16px'><div><p class='font-weight-bold mb-0'>Temporarily Restricted</p><p class='mb-0'>Call Customer Service for availability at 1-800-4LENNOX.</p></div></div>";
+        // Converts HTML string to DOM Nodes
+        var disabledProductPLPMessageContainer = createEmergencyProductAlert(disabledProductPLPMessage);
+        // Insert after the shipping information
+        insertCustomAlert(disabledProductPLPMessageContainer, shippingElement);
+    }
+    // Function to show PDP Messaging on PDP
+    function generateDisabledProductMessagePDP() {
+        // Find the product box
+        var shippingElement = document.querySelector(".product-actions .OT-Product-Shipping-Pickup");
+        // Hide the shipping information
+        shippingElement.style.display = "none";
+        // This is a Cirrus alert
+        var disabledProductPDPMessage = "<div class='alert alert-warning emergency-product-alert-bar mb-5 mx-auto' role='alert'><i class='far fa-exclamation-circle'></i><div><p class='font-weight-bold mb-0'>Temporarily Restricted</p><p class='mb-0'>Call Customer Service for availability at 1-800-4LENNOX.</p></div></div>";
+        // Converts HTML string to DOM Nodes
+        var disabledProductPDPMessageContainer = createEmergencyProductAlert(disabledProductPDPMessage);
+        // Insert after the shipping information
+        insertCustomAlert(disabledProductPDPMessageContainer, shippingElement);
+    }
+    // Automatically create the alert on the quick order dropdown
+    function createQuickOrderError() {
+        // Find a place to insert the error message
+        var errorPosition = document.getElementById("valueretention");
+        // This is a Cirrus alert
+        var disabledQuickOrderMessage = "<div class='alert alert-warning emergency-product-alert-bar mb-5 mx-auto' role='alert' style='padding:10px 16px;'><div><p class='font-weight-bold mb-0'>Temporarily Restricted</p><p class='mb-0'>Call Customer Service for availability at 1-800-4LENNOX.</p></div></div>";
+        // Converts HTML string to DOM Nodes
+        var disabledQuickOrderMessageContainer = createEmergencyProductAlert(disabledQuickOrderMessage);
+        disabledQuickOrderMessageContainer.style.display = "none";
+        disabledQuickOrderMessageContainer.id = "quick-order-product-error-box";
+        // Insert after the "Add more entry fields" link. Only insert the error message once!
+        if(document.getElementById("quick-order-product-error-box") === null) {
+            insertCustomAlert(disabledQuickOrderMessageContainer, errorPosition);
+        }
+    }
+    // Automatically create the alert on the quick order page
+    function createLargeQuickOrderError() {
+        // Find a place to insert the error message
+        var errorPosition = document.querySelector("#quickOrderForm .form-list");
+        // This is a Cirrus alert
+        var disabledQuickOrderMessage = "<div class='alert alert-warning emergency-product-alert-bar mb-5 mx-auto' role='alert'><i class='far fa-exclamation-circle'></i><div><p class='font-weight-bold mb-0'>Temporarily Restricted</p><p class='mb-0'>Call Customer Service for availability at 1-800-4LENNOX.</p></div></div>";
+        // Converts HTML string to DOM Nodes
+        var disabledQuickOrderMessageContainer = createEmergencyProductAlert(disabledQuickOrderMessage);
+        disabledQuickOrderMessageContainer.style.display = "none";
+        disabledQuickOrderMessageContainer.id = "quick-order-large-product-error-box";
+        // Insert after the list of input boxes. Only insert the error message once!
+        if(document.getElementById("quick-order-large-product-error-box") === null) {
+            insertCustomAlert(disabledQuickOrderMessageContainer, errorPosition);
+        }
+    }
+    // Controls the showing of the specific alerts
+    function showProductAlertMessage(el) {
+        // Find the element and show it.
+        if(document.getElementById(el) !== null) {
+            document.getElementById(el).style.display = "block";
+        }
+    }
+    // Controls the hiding of the quick order dropdown alert
+    function hideProductAlertMessage(el) {
+        // Find the element and hide it.
+        if(document.getElementById(el) !== null) {
+            document.getElementById(el).style.display = "none";
+        }
+    }
+    /* **************************
+        Emergency Product App
+    ************************** */
+    // Wait for the site to load
+    window.addEventListener('load', function() {
+        // If the emergency disabled products array is active, disable PDP/PLP/Cart page
+        if(emergencyDisabledProducts.length > 0) {
+            // Loop through all emergency products
+            emergencyDisabledProducts.forEach(function(product) {
+                // This ID is found on the PDP and PLP pages. It blocks the add to cart button
+                var createButtonID = "#product-button-" + product;
+                // If the element exists, begin blocking the product
+                if(document.querySelector(createButtonID) !== null) {
+                    // Alert message here
+                    // Disable the Add To Cart button. There are multiple ajax requests that fire to activate this so its on an interval to overwrite them as they happen.
+                    // Could probably just delete the button (to remove the event listeners) and create a new one. This would remove the timer.
+                    setInterval(function() {
+                        if(document.querySelector(createButtonID) !== null) {
+                            document.querySelector(createButtonID).disabled = true;
+							if($(createButtonID).parent().parent().find('input[type="checkbox"]') !='undefined'){
+								$(createButtonID).parent().parent().find('input[type="checkbox"]').attr('disabled', true);
+							}
+                        }
+                    }, 500);
+                    // Find the Product column on the PLP template and append the alert
+                    if(document.querySelector(".page-productListing") !== null) {
+                        generateDisabledProductMessagePLP(product);
+                    }
+                    // Find the Product column in the Search page template and append the alert
+                    if(document.querySelector(".page-search") !== null) {
+                        generateDisabledProductMessagePLP(product);
+                    }
+                    // Find the Product page template and append the alert
+                    if(document.querySelector(".page-productDetails .product-content #productStatus-" + product) !== null) {
+                        generateDisabledProductMessagePDP(product);
+                    }
+                }
+                // Find the related products carousel and remove the products from it. Removing the DOM elements prevents a layout issue with the product carousel
+                if(document.querySelector(".page-productDetails .product-collateral [data-product-id='" + product + "']") !== null) {
+                    document.querySelector(".page-productDetails .product-collateral [data-product-id='" + product + "']").remove();
+                }
+                // This class is on the cart page and will scan for a length
+                if(document.querySelector(".page-cartPage [data-product-id='" + product + "']") !== null) {
+                    // OT Cart has custom cart code that needs to be scanned through before applying the alert bar
+                    if(document.getElementById("OT-Cart__OrderSummer") !== null) {
+                        // Loop through both checkout buttons and disable them
+                        document.querySelectorAll(".checkoutButtonForOT").forEach(function(el) {
+                            // Disables all click events
+                            el.addEventListener("click", function(e) {e.preventDefault();});
+                            // CSS class for styling
+                            el.classList.add("disabled");
+                        });
+                        // Find all the specific product rows and append the alert after it
+                        // Some rows in the OT cart are not products
+                        if(document.querySelector("[data-code='" + product + "']") !== null) {
+                            document.querySelectorAll("[data-code='" + product + "']").forEach(function(targetRow) {
+                                // The `data-bundleitem` seems to denote product rows
+                                if(targetRow.getAttribute("data-bundleitem") !== null) {
+                                    // Remove styling
+                                    targetRow.style.border = "0";
+                                    // This is a Cirrus alert
+                                    // OT Cart has 6 columns instead of 5 in the normal cart, so set the colspan to 6
+                                    var outOfStockAlert = "<td colspan='6'><div class='alert alert-error mb-5 mx-auto' role='alert'><i class='far fa-exclamation-triangle'></i><div><p class='font-weight-bold mb-0'>Item Temporarily Restricted</p><p class='mb-0'>Call Customer Service for availability at 1-800-4LENNOX. Remove the item to complete checkout.</p></div></div></td>";
+                                    // Converts HTML string to DOM Nodes
+                                    var outOfStockAlertContainer = document.createElement("tr");
+                                    outOfStockAlertContainer.classList.add("cirrus");
+                                    outOfStockAlertContainer.innerHTML = outOfStockAlert;
+                                    // Insert alert after the product row
+                                    insertCustomAlert(outOfStockAlertContainer, targetRow);
+                                }
+                            });
+                        }
+                    } else {
+                        // Loop through both checkout buttons and disable them
+                        document.querySelectorAll(".checkoutButton").forEach(function(el) {
+                            // Disables all click events
+                            el.addEventListener("click", function(e) {e.preventDefault();});
+                            // CSS class for styling
+                            el.classList.add("disabled");
+                        });
+                        // Find all the specific product rows and append the alert after it
+                        // Mobile has a different cart view. It uses divs for some reason
+                        if(window.location.hostname.split(".")[0] === "m") {
+                            if(document.querySelector("[data-product-id='" + product + "']") !== null) {
+                                document.querySelectorAll("[data-product-id='" + product + "']").forEach(function(targetRow) {
+                                    // Remove styling
+                                    targetRow = targetRow.parentNode;
+                                    targetRow.style.border = "0";
+                                    // This is a Cirrus alert
+                                    var outOfStockAlert = "<div class='alert alert-error mb-5 mx-auto' role='alert'><i class='far fa-exclamation-triangle'></i><div><p class='font-weight-bold mb-0'>Item Temporarily Restricted</p><p class='mb-0'>Call Customer Service for availability at 1-800-4LENNOX. Remove the item to complete checkout.</p></div></div>";
+                                    // Converts HTML string to DOM Nodes
+                                    var outOfStockAlertContainer = document.createElement("div");
+                                    outOfStockAlertContainer.classList.add("cirrus");
+                                    outOfStockAlertContainer.innerHTML = outOfStockAlert;
+                                    // Insert alert after the product row
+                                    insertCustomAlert(outOfStockAlertContainer, targetRow);
+                                });
+                            }
+                        } else {
+                            if(document.querySelector("[data-code='" + product + "']") !== null) {
+                                document.querySelectorAll("[data-code='" + product + "']").forEach(function(targetRow) {
+                                    // Remove styling
+                                    targetRow.style.border = "0";
+                                    // This is a Cirrus alert
+                                    var outOfStockAlert = "<td colspan='5'><div class='alert alert-error mb-5 mx-auto' role='alert'><i class='far fa-exclamation-triangle'></i><div><p class='font-weight-bold mb-0'>Item Temporarily Restricted</p><p class='mb-0'>Call Customer Service for availability at 1-800-4LENNOX. Remove the item to complete checkout.</p></div></div></td>";
+                                    // Converts HTML string to DOM Nodes
+                                    var outOfStockAlertContainer = document.createElement("tr");
+                                    outOfStockAlertContainer.classList.add("cirrus");
+                                    outOfStockAlertContainer.innerHTML = outOfStockAlert;
+                                    // Insert alert after the product row
+                                    insertCustomAlert(outOfStockAlertContainer, targetRow);
+                                });
+                            }
+                        }
+                    }
+                }
+                // Cross Sell Up Sell
+                setInterval(function() {
+                    // Remove with CSS from Cross Sell Up Sell Add to Cart modal. The interval continues to fire so it can find ajax responses and hide them as well.
+                    // Setting the CSS property 'display' to 'none' does not seem to cause a layout issue with Cross Sell Up Sell.
+                    if(document.querySelector("#add-to-cart #product-tile-" + product) !== null) {
+                        document.querySelector("#add-to-cart #product-tile-" + product).style.display = "none";
+                    }
+                }, 500);
+                // Mobile accessories button needs to filter through and remove the items. CSS alone will cause layout issues on mobile
+                // This is on a timeout to allow for the DOM to finish loading ajax requests
+                setTimeout(function() {
+                    if(window.location.hostname.split(".")[0] === "m") {
+                        // The accessory item is inside of a parent div so the entire element needs to be removed
+                        if(document.querySelector("[data-acc-product-id='" + product + "']") !== null) {
+                            document.querySelector("[data-acc-product-id='" + product + "']").parentNode.remove();
+                        }
+                        // Some accessories are generated with AJX so this interval will remove them if detecting a click event
+                        if(document.querySelector(".page-productDetails #accessories") !== null) {
+                            document.querySelector(".page-productDetails #accessories").addEventListener("click", function() {
+                                setInterval(function() {
+                                    if(document.querySelector("[data-acc-product-id='" + product + "']") !== null) {
+                                        document.querySelector("[data-acc-product-id='" + product + "']").parentNode.remove();
+                                    }
+                                }, 500);
+                            })
+                        }
+                    } else {
+                        // Remove the accessory element on desktop to prevent CSS layout issues
+                        if(document.querySelector("[data-acc-product-id='" + product + "']") !== null) {
+                            document.querySelector("[data-acc-product-id='" + product + "']").remove();
+                        }
+                        // Some accessories are generated with AJX so this interval will remove them if detecting a click event
+                        if(document.querySelector(".page-productDetails #accessories") !== null) {
+                            document.querySelector(".page-productDetails #accessories").addEventListener("click", function() {
+                                setInterval(function() {
+                                    if(document.querySelector("[data-acc-product-id='" + product + "']") !== null) {
+                                        document.querySelector("[data-acc-product-id='" + product + "']").remove();
+                                    }
+                                }, 500);
+                            })
+                        }
+                    }
+                }, 500);
+            });
+            // Block Quick Order
+            // This is a placeholder variable so we can detect when it turns into an interval
+            var scanForBlockedProducts = null;
+            // Only fire when the quick order menu is available
+            if(document.querySelector("[href='#quick-order-menu']") !== null) {
+                document.querySelector("[href='#quick-order-menu']").addEventListener("click", function() {
+                    // The "shown" class doesnt appear immediately so use a timer and wait for that to finish
+                    setTimeout(function() {
+                        // Grab all the classes and convert from NodeList to an Array
+                        var listOfQuickOrderClasses = document.getElementById("quick-order-menu").classList;
+                        listOfQuickOrderClasses = Array.from(listOfQuickOrderClasses);
+                        // Generates the alert bar and appends it to the DOM. It is hidden by default
+                        createQuickOrderError();
+                        // If the quick order page is visible, begin scanning every 500ms
+                        if(listOfQuickOrderClasses.includes("shown")) {
+                            scanForBlockedProducts = setInterval(function() {
+                                // Set base variable. If this is changed to "true" then the error will show. If not, the error will hide.
+                                var blockedProductExists = false;
+                                // Scan through all input fields. Initially this was an event listener but there are extra events that occur when the system tries to validate the catalog number
+                                document.querySelectorAll("#quick-order-menu input").forEach(function(el) {
+                                    // If the item is in our emergency product list, turn the input field red
+                                    if(emergencyDisabledProducts.includes(el.value.toUpperCase())) {
+                                        blockedProductExists = true;
+                                        el.classList.add("error");
+                                    } else {
+                                        el.classList.remove("error");
+                                    }
+                                });
+                                // If there is at least one blocked product, show the alert message
+                                if(blockedProductExists) {
+                                    document.querySelector(".quick-order-menu").disabled = true;
+                                    showProductAlertMessage("quick-order-product-error-box");
+                                } else {
+                                    document.querySelector(".quick-order-menu").disabled = false;
+                                    hideProductAlertMessage("quick-order-product-error-box");
+                                }
+                                // If the user clicks off or closes the quick order dropdown, clear the interval
+                                if(!Array.from(document.getElementById("quick-order-menu").classList).includes("shown")) {
+                                    clearInterval(scanForBlockedProducts);
+                                }
+                            }, 500);
+                        }
+                    }, 500)
+                });
+            }
+            // Quick Order Page
+            if(document.querySelector(".page-quickOrder") !== null) {
+                // Create the alert message and append to the DOM. It is hidden by default
+                createLargeQuickOrderError();
+                // Begin scanning the list for blocked products
+                setInterval(function() {
+                    var blockedLargeProductExists = false;
+                    document.querySelectorAll("#quickOrderForm input").forEach(function(el) {
+                        // If the item is in our emergency product list, turn the input field red
+                        if(emergencyDisabledProducts.includes(el.value.toUpperCase())) {
+                            blockedLargeProductExists = true;
+                            el.classList.add("error");
+                        } else {
+                            el.classList.remove("error");
+                        }
+                    });
+                    // If there is at least one blocked product, show the alert message
+                    if(blockedLargeProductExists) {
+                        document.querySelector(".quick-order-submit").disabled = true;
+                        showProductAlertMessage("quick-order-large-product-error-box");
+                    } else {
+                        document.querySelector(".quick-order-submit").disabled = false;
+                        hideProductAlertMessage("quick-order-large-product-error-box")
+                    }
+                }, 500);
+            }
+        }
+    });
+</script>
+<style>    /* All of this can be removed when Cirrus goes live */    .checkoutButton.disabled,    .checkoutButtonForOT.disabled {        pointer-events: none;        opacity: .5;        cursor: not-allowed;        background-color: #666;    }    /* Cirrus Styles */    .cirrus .alert {        position: relative;        padding: 10px 20px;        margin-bottom: 1rem;        border-radius: 0;        font-size: 24px;        display: -ms-flexbox;        display: flex;        -ms-flex-align: center;        align-items: center;        color: #222;        border-width: 0;        max-width: 900px;    }    .cirrus .alert a:not(.btn) {        font-weight: 700;        color: #222;    }    .cirrus .alert > i,    .cirrus .alert > [data-dismiss] {        padding: 8px 0;        -ms-flex: 0 0 auto;        flex: 0 0 auto;        width: auto;        max-width: 100%;        font-size: 24px;        font-weight: 400;        line-height: 1;    }    .cirrus .alert > i {        padding-right: 20px;    }    .cirrus .alert > [data-dismiss] {        padding-left: 20px;        padding-right: 20px;        margin-right: -20px;    }    .cirrus .alert > div {        -ms-flex-preferred-size: 0;        flex-basis: 0;        -ms-flex-positive: 1;        flex-grow: 1;        max-width: 100%;        font-size: 14px;    }    .cirrus .alert-heading {        color: inherit;    }    .cirrus .alert-link {        font-weight: 700;    }    .cirrus .alert-dismissible .close {        position: relative;        top: 0;        right: 0;        z-index: 2;        color: inherit;    }    .cirrus .alert-success {background-color: #d5edd5;}    .cirrus .alert-informational {background-color: #dff1f5;}    .cirrus .alert-notification {background-color: #dff1f5;}    .cirrus .alert-warning {background-color: #ffedc7;}    .cirrus .alert-error {background-color: #f7dfe4;}    .cirrus .mb-0 {margin-bottom: 0 !important;}    .cirrus .mb-5 {margin-bottom: 3rem !important;}    .cirrus .mx-auto {margin-right: auto !important;}    .cirrus .mx-auto {margin-left: auto !important;}    .cirrus .font-weight-bold {font-weight: 700 !important;}</style></div><div class="content"><!-- OneTrust Cookies Consent Notice start for lennoxpros.com -->
+<script src="scripttemplates/otsdkstub.js"  type="text/javascript" charset="UTF-8" data-domain-script="8da2c37c-5fb0-4a96-ab8d-28b62a64d20f" ></script>
+<script type="text/javascript">
+function OptanonWrapper() { }
+</script>
+<!-- OneTrust Cookies Consent Notice end for lennoxpros.com --></div></div>	
+					</div>				
+				</div><!-- end row -->
+        </div><!-- end row -->
+    </div><!-- end container -->  
+</footer><!-- end footer -->  
+<div id="login-modal" class="moby shade">
+    <div class="modal-content moby-inner">
+        <h5>Please sign in or create an account</h5>
+        <a href="#" class="close" data-target="#login-modal" data-moby="toggle">close</a>
+        <div class="row">
+            <div class="col-sm-6 left-column">
+                <p class="ff-bold">Member Sign in</p>
+                <a href="signin.html" class="button button-default button-block">SIGN IN</a>
+                <p>&nbsp;<br><span class="ff-bold">Have a LennoxPros.com account?</span> Sign in with the same credentials.</p>
+            </div>
+            <div class="col-sm-6 right-column">
+                <p class="ff-bold">Not a member?
+                <br>Register in 3 easy steps, today!</p>
+                <p><br><i class="icon-check"></i>&nbsp; Access to pricing and ordering
+                <br><i class="icon-check"></i>&nbsp; Exclusive promotions
+           		<br><i class="icon-check"></i>&nbsp; Exclusive HVAC eTools
+            	<br><i class="icon-check"></i>&nbsp; Access to training
+            	<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;. . . .and more!
+                </p>
+                <p>I am:</p>
+                <a href="#" data-target="#register-modal" data-moby="show" class="button button-default button-block uppercase register-hvac-pro">An HVAC PRO</a>
+                <a href="http://lennox.com/" class="button button-default button-block uppercase">Other</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="register-modal" class="moby shade">
+    <div class="modal-content moby-inner">
+        <form id="register-modal-form" name="register-modal-form" action="registration/prestep1.html" method="post"><h5>HVAC Professional Registration</h5>
+            <a href="#" class="close" data-target="#register-modal" data-moby="toggle">close</a>
+            <div class="row">
+                <div class="col-md-12">
+                    <ul class="form-list">
+                        <li class="control">
+                            <div class="custom-radio">
+                                <input type="radio" id="has-number" name="customerNumber" value="true" checked="checked" />
+                                <label for="has-number">I have a Lennox Customer Number</label>
+                            </div>
+                        </li>
+                        <li class="control">
+                            <div class="custom-radio">
+                                <input type="radio" name="customerNumber" id="no-number" value="false" class="radio" />
+                                <label for="no-number">I DO NOT have a Lennox Customer Number</label>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="buttons-set">
+                <button class="button button-default" id="registerContinue" type="submit">CONTINUE</button>
+            </div>
+        <div>
+<input type="hidden" name="CSRFToken" value="0bfb6862-aede-4ef1-88c5-e41c91332c28" />
+</div></form></div>
+</div>
+<div id="stock-zip-modal-default" style="display:none">
+        <div class="modal-content moby-inner">
+<form id="stock-zip-form-default">
+	<input type="hidden"  id="CSRFToken" name="CSRFToken" value="0bfb6862-aede-4ef1-88c5-e41c91332c28" /> 
+       <div class="OT-Modal__Store__form">
+           <div class="col"> 
+               <label class="control-label">Enter your Zip/Postal code </label> 
+               <input type="text" class="input-text postalcode" id="postal-code-store" name="postal-code-store" value="">
+           </div>
+           <div class="selected-branch-info col">
+               <label class="control-label">Select Radius </label>   
+               <select id="store-radius" name="store-radius" class="custom-styled-select-item-level styled-select">
+	   	       	   	<option value="30"  >
+	         	   		Within 30 miles
+			       	</option>
+               		<option value="60" selected >
+	         	   		Within 60 miles
+			       	</option>
+	               <option value="90"  >
+	         	   		Within 90 miles
+			       	</option>
+			       	<option value="120"  >
+	         	   		Within 120 miles
+			       	</option>
+			       	<option value="200"  >
+	         	   		Within 200 miles
+			       	</option>
+	           </select>                            
+           </div>
+           <div class="col btn-col">
+               <button type="button" class="button button-small submit-branch">GO</button>
+           </div>
+       </div> 
+</form>
+            <div id="stock-availability-result-data-default">
+            	<!-- Product information start -->
+<div class="OT-Modal__Store__ProductInfo"> 
+  	    <p class="OT-Modal__Store__List__Title control-label">Product Info</p>  
+	    <span class="break-line product-name">
+		    </span>	    
+	    <div class="OT-Modal__Store__ProductInfo__Id ff-semibold" data-product-id="">Cat#: <span class="product-code"></span></div>
+</div>
+<!-- Product information end -->  
+<!--Update the Add To Cart Button style here, since on PLP we modify the original class with PLP product add to cart button status  -->
+<input type="hidden" id="plantAddButtonClass" value="button button-small TT btn-ajax stockaddtocart">
+<!-- Default Store Start -->
+ <!-- Default Store End -->
+	<!-- Nearby Stores Start -->
+    <!-- Standard Shipping Start -->
+<!-- Standard Shipping End -->
+<!-- Standard Shipping Item Added Start -->
+ <!-- Standard Shipping Item Added End -->
+<div class="OT-Modal__Store__CTA buttons-set">
+<a href="#" onclick="location.reload();" class="button button-small button-alternate TT continue-shopping">continue shopping</a><a href="cart.html" class="button button-small TT">view cart</a>
+</div>
+<div class="OT-Modal__No-data align-center ff-bold">No store found for that zipcode and search radius</div>
+            </div>    
+        </div>
+    </div>
+ <div id="stock-zip-modal" class="moby shade medium OT-Modal OT-Modal--scroll OT-Modal__Store">
+ 	<div class="modal-content moby-inner">
+            <a href="#" class="close"  data-target="#stock-zip-modal" data-moby="toggle">close</a>
+            <h5 class="modal-title">Stock Availability</h5>
+            	<form id="stock-zip-form">
+            	</form>
+            <div id="stock-availability-result-data">
+            </div>        
+        </div>
+ </div>
+<c:choose>
+   <c:when test="true">
+      <div id="set-zipcode" data-backdrop="static" class="moby cirrus shade small">
+      <div class="modal-dialog modal-dialog-centered">
+         <div class="modal-content">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+            </button>
+            <h3 class="modal-title">Set Zip/Postal Code</h3>
+            <form id="new-location-form" action="changelocation.html" method="post">
+               <input type="hidden"  id="CSRFToken" name="CSRFToken" value="0bfb6862-aede-4ef1-88c5-e41c91332c28" />
+               <ul class="form-list">
+                  <li>
+                     <label for="postal-code">Zip/Postal Code</label>
+                     <div class="input-box">
+                        <input type="text" placeholder="Zip/Postal Code" class="input-text postalcode" id="postal-code-new" name="zipcode" maxlength="10">
+                        <i class="fas fa-exclamation-triangle" ></i>
+                     </div>
+                  </li>
+                   <li style="display:none">
+                       <label for="radius">Radius</label>
+                       <div class="input-box">
+                          <select class="select" name="radius" id="radius">
+                             <option value="30" selected>
+                                Within 30 miles
+                             </option>
+                             <option value="60">
+                                Within 60 miles
+                             </option>
+                             <option value="90">
+                                Within 90 miles
+                             </option>
+                             <option value="120">
+                                Within 120 miles
+                             </option>
+                             <option value="200">
+                                Within 200 miles
+                             </option>
+                          </select>
+                       </div>
+                    </li>
+               </ul>
+               <div class="buttons-set modal-footer align-items-end justify-content-start">
+                  <button type="button" id="cancelAndEdit" class="btn btn-tertiary" data-dismiss="modal">Cancel</button>
+                  <button type="submit" id="submit-zipcode" class="button button-default small btn btn-primary">Save</button>
+               </div>
+            </form>
+         </div>
+       </div>
+      </div>
+   </c:when>
+   <c:otherwise>
+      <div id="update-loc-modal" class="moby shade small">
+         <div class="modal-content moby-inner">
+            <a href="#" class="close" data-target="#update-loc-modal" data-moby="toggle">close</a>
+            <h5>Select your zip/postal code:</h5>
+            <form id="location-form" action="changelocation.html" method="post">
+               <input type="hidden"  id="CSRFToken" name="CSRFToken" value="0bfb6862-aede-4ef1-88c5-e41c91332c28" />
+               <ul class="form-list">
+                  <li>
+                     <label for="postal-code">Zip/Postal Code</label>
+                     <div class="input-box">
+                        <input type="text" class="input-text postalcode" id="postal-code" name="zipcode">
+                     </div>
+                  </li>
+                  <li>
+                     <label for="radius">Radius</label>
+                     <div class="input-box">
+                        <select class="select" name="radius" id="radius">
+                           <option value="30" selected>
+                              Within 30 miles
+                           </option>
+                           <option value="60">
+                              Within 60 miles
+                           </option>
+                           <option value="90">
+                              Within 90 miles
+                           </option>
+                           <option value="120">
+                              Within 120 miles
+                           </option>
+                           <option value="200">
+                              Within 200 miles
+                           </option>
+                        </select>
+                     </div>
+                  </li>
+               </ul>
+               <div class="buttons-set">
+                  <button type="submit" class="button button-default small">Enter</button>
+                  <div class="make-default-wrapper">
+                     <div class="custom-checkbox">
+                        <input type="checkbox" class="checkbox" id="make-default" name="default">
+                        <label for="make-default">Make Default</label>
+                     </div>
+                  </div>
+               </div>
+            </form>
+         </div>
+      </div>
+   </c:otherwise>
+</c:choose>
+                 <!-- Set zip modal -->
+                <div id="store-zip-modal" data-backdrop="static"  class="cirrus setZip moby shade small OT-Modal OT-Modal--scroll OT-Modal__Store" >
+                    <div class="modal-dialog modal-dialog-centered">
+                         <div class="modal-content">
+                            <button type="button" class="close" data-target="#store-zip-modal.setZip" onClick=" $('#store-zip-modal.setZip').Moby('hide');" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                            <h3 class="modal-title">Set Zip/Postal Code</h3>
+<form id="store-zip-form">
+	<input type="hidden"  id="CSRFToken" name="CSRFToken" value="0bfb6862-aede-4ef1-88c5-e41c91332c28" />
+       	<div class="OT-Modal__Store__form" >
+		   <div>
+        	<label for="postal-code-store">Zip/Postal Code</label>
+			</div>
+           	<div class="input-box">
+	        			<input type="text" class="input-text postalcode" id="postal-code-store" name="postal-code-store" value="" maxlength="10" placeholder="Zip/Postal Code"  oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" />
+       			<i class="fas fa-exclamation-triangle"></i>
+          	</div>
+       	</div>
+       	<div class="buttons-set modal-footer align-items-end justify-content-start OT-Modal__Store__CTA" >
+       		<button type="button"  class="btn btn-tertiary" onclick=" $('#store-zip-modal.setZip').Moby('hide');" data-dismiss="modal">Cancel</button>
+       		<button class="button button-small  js-store-done button button-default small btn btn-primary">Save</button>
+       	</div>
+</form>
+                         </div>
+                    </div>
+                </div>
+                 <!-- Check nearby stores modal -->
+                <div id="store-modal"  class="checkNearbyStores cirrus moby shade medium OT-Modal OT-Modal--scroll OT-Modal__Store js-view-more-active" >
+                    <div class="modal-dialog modal-dialog-centered">
+                       <div class="modal-content ">
+                          <button type="button" class="close" data-target="#store-modal.checkNearbyStores"  onClick=" $('#store-modal').Moby('hide');" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                          </button>
+                          <h3 class="modal-title">Check Nearby Stores</h3>
+                          <form id="store-zip-form">
+                            <div class="OT-Modal__Store__form">
+                               <div >
+                                    <label class="control-label">Find by City or Zip/Postal Code</label>
+                                        <input type="text" class="input-text " id="postal-code-store-new" name="postal-code-store" value="" placeholder="City or Zip/Postal Code">
+                                  <button type="button" class=" submit-branch  btn btn-primary">
+                                     Find
+                                  </button>
+                               </div>
+                            </div>
+                          </form>
+                          <!-- Store Data : Start -->
+                          <div id="Store-result-data">
+                             <div class="wrap">
+<div class="noStoresSelected">
+                       <i class="fal fa-store-alt" ></i>
+                       <div >
+                          <p style="text-align: center;">Find a nearby store using a city or zip/postal code above</p>
+                       </div>
+               </div>
+        </div>
+<div class="OT-Modal__Store__CTA buttons-set modal-footer align-items-end justify-content-start " id="storeSelectionDone">
+	<button type="button"  class="btn btn-tertiary" onclick=" $('#store-modal').Moby('hide');" data-dismiss="modal">Cancel</button>
+	<button id="storeSelectionDone" class="btn btn-primary  TT js-store-done">Update Store</button>
+</div>
+                          </div>
+                       </div>
+                   </div>
+                </div>
+    	</div>
+    <form name="accessiblityForm">
+    <input type="hidden" id="accesibility_refreshScreenReaderBufferField" name="accesibility_refreshScreenReaderBufferField" value=""/>
+</form>
+<div id="ariaStatusMsg" class="skip" role="status" aria-relevant="text" aria-live="polite"></div>
+<script type="text/javascript">
+	/*<![CDATA[*/
+	//Define a javascript variable to hold the content path
+	var ACC = { config: {} };
+	ACC.config.contextPath = "";
+	ACC.config.encodedContextPath = "";
+	ACC.config.commonResourcePath = "/_ui/desktop/common";
+	ACC.config.themeResourcePath = "/_ui/desktop/theme-lennoxpro";
+	ACC.config.siteResourcePath = "/_ui/desktop/site-lennoxpro";
+	ACC.config.language = "";
+	ACC.config.rootPath = "/";
+	ACC.config.CSRFToken = "0bfb6862-aede-4ef1-88c5-e41c91332c28";
+	ACC.config.timeOut = 7200;
+	ACC.config.sessionTimeout = "SessionTimeout";
+	ACC.pwdStrengthVeryWeak = 'Very weak';
+	ACC.pwdStrengthWeak = 'Weak';
+	ACC.pwdStrengthMedium = 'Medium';
+	ACC.pwdStrengthStrong = 'Strong';
+	ACC.pwdStrengthVeryStrong = 'Very strong';
+	ACC.pwdStrengthUnsafePwd = 'password.strength.unsafepwd';
+	ACC.pwdStrengthTooShortPwd = 'Too short';
+	ACC.pwdStrengthMinCharText = 'Minimum length is %d characters';
+	ACC.accessibilityLoading = 'aria.pickupinstore.loading';
+	ACC.accessibilityStoresLoaded = 'aria.pickupinstore.storesloaded';
+	/*]]>*/
+		var messageBannerInterval='5000';
+		var enableAutoSaveCart='true';
+		var localStorageExpiry='0';
+		var selectPickUp = 'false';
+		var globalDefaultStore;
+		var enablePDPAvailAjax = 'false';
+		var enableAHRICDQ = 'true';
+		var repairPartsBackButtonCache = Number('1200000');
+		var newPdpEnabled= 'true';
+</script>
+<script type="text/javascript" src="_ui/desktop/common/js/acc.autocomplete.js"></script>
+<script type="text/javascript" src="_ui/shared/js/acc.track.js"></script>
+<script type="text/javascript" src="_ui/desktop/theme-lennoxpro/js/minified/app.min.js"></script>
+		<script type="text/javascript" src="_ui/desktop/theme-lennoxpro/js/minified/search-optimization.min.js"></script>
+	<script type="text/javascript">
+function EGA_trackNotification(notificationData) {
+		dataLayer.push({'event' : 'eventClickTrigger', 'eventCategory' : 'Shipment Visibility', 'eventAction' : 'Update Notifications', 'eventLabel' : "SMS:" + notificationData.get("smsdata") + " Email:" + notificationData.get("emaildata")});
+}
+function trackNotification(notificationData) {
+	EGA_trackNotification(notificationData);
+}
+window.mediator.subscribe('trackNotification', function(data) {
+	if (data.notificationData){
+		trackNotification(data.notificationData);
+	}
+});
+</script>	
+	 <script id="product-grid-pricing" type="text/x-handlebars-template">
+	{{#hasNetPrice}}
+	<p class="your-price"> <span class="your-price-text"></span> {{netPrice}}</p>
+	{{/hasNetPrice}}
+</script>
+<script id="cart-cdq-select" type="text/x-handlebars-template">
+    <select id="cdqContractNumber" class="cdqContractNumberCls"  name="cdqNumber">
+        <option value="" checked>No Contract</option>
+        {{#each contractPricingData}}
+        <option data-cdqprice="${{this.price}}" data-refnumber="{{this.documentItemNumber}}" data-rncContract="{{this.rncContract}}"  data-cdqDescription="{{this.cdqDescription}}"  data-contractNumber="{{this.contractNumber}}" value="{{this.contractNumber}}">{{this.contractNumber}} - {{this.cdqDescrTrim}} - ${{this.price}} - {{this.openQuantity}} left</option>
+        {{/each}}
+    </select>
+</script><script type="text/javascript">window.auth = false;</script>
+<script type="text/javascript">
+    window.cvlp = false;
+    window.cvyp = false;
+</script>
+<script type="text/javascript" src="_ui/desktop/theme-lennoxpro/js/gor-lennox/permissions.js"></script>
+<script type="text/javascript">_satellite.pageBottom();</script>
+<script type="text/javascript">var coolCalcLogoutURL1 = "coolcalc_subdomain/user/logout.html";</script>
+<script type="text/javascript">
+        var coolCalcIframeLoaded = Gorilla.utilities.getCookie("coolCalcIframeLoaded");
+        Gorilla.utilities.deleteCookie("coolCalcIframeLoaded");
+        if(coolCalcIframeLoaded){(function()
+        {(new Image()).src = coolCalcLogoutURL1;
+        })();
+        }
+    </script>
+<!-- Call  webApplicationInjector.js only for smart edit session-->
+<script>
+    var parentPathname = window.parent.location.pathname;
+    if(parentPathname.includes("smartedit")) {
+        addScript("_ui/shared/js/minified/imager.min.js");
+        addScript("_ui/addons/smarteditaddon/shared/common/js/webapplicationinjector.js");
+        addScript("_ui/addons/smarteditaddon/shared/common/js/reprocesspage.js");
+        addScript("_ui/addons/smarteditaddon/shared/common/js/adjustcomponentrenderingtose.js");
+    }
+    function addScript(url) {
+        var script=document.createElement('script');
+        script.type='text/javascript';
+        script.src=url;
+        document.body.append(script);
+    }
+</script>
+</body>
+</html>
